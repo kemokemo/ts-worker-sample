@@ -18,6 +18,8 @@ npm i
 npm run build
 ```
 
+For the build process, we use [esbuild](https://github.com/evanw/esbuild), which runs very fast. See [scripts/build.js](https://github.com/kemokemo/ts-worker-sample/blob/main/scripts/build.js) for detailed instructions.
+
 If you develop and debug, please use `build-dev` to generate map file.
 
 ```sh
