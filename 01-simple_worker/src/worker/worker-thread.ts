@@ -3,16 +3,16 @@
 
 onmessage = (e) => processCommandFromMainThread(e.data);
 
-function processCommandFromMainThread(command: Command) {
-    switch (command.type) {
-        case "sendMessageToThread":
-            let [threadID, message] = command.data;
+function processCommandFromMainThread(mc: MChannel) {
+    switch (mc.type) {
+        case "sendMessageToWorker":
+            let [message] = mc.data;
             console.log(`This message is worker log: ${message}`);
 
             // refer to the 'https://developer.mozilla.org/ja/docs/Web/API/Web_Workers_API/Using_web_workers' for more detail.
             postMessage({
-                type: "sendMessageToThread",
-                data: [1, `Ack: ${message}`],
+                type: "receivedFromWorker",
+                data: [`Ack: ${message}`],
             });
             break;
 

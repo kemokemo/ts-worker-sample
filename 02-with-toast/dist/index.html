@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sample Index</title>
+	<script src="app.js"></script>
+	<script src="app-worker.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+	<label for="message-01">Message posting to worker thread:</label>
+	<br>
+	<textarea name="message" id="message-01" cols="30" rows="10"></textarea>
+	<br>
+	<button id="post-to-worker">Post to worker thread!</button>
+	<br>
+	<br>
+
+	<label for="message-02">Response from worker thread:</label>
+	<br>
+	<textarea name="message" id="message-02" cols="30" rows="10"></textarea>
+</body>
+
+</html>

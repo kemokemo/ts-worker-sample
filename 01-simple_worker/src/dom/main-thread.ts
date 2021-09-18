@@ -19,15 +19,15 @@ function postToWorkerThread() {
     }
 
     worker.postMessage({
-        type: "sendMessageToThread",
-        data: [1, message],
+        type: "sendMessageToWorker",
+        data: [message],
     });
 }
 
-function processCommandFromWorkerThread(command: Command) {
-    switch (command.type) {
-        case "sendMessageToThread":
-            let [threadID, message] = command.data;
+function processCommandFromWorkerThread(wc: WChannel) {
+    switch (wc.type) {
+        case "receivedFromWorker": 
+            let [message] = wc.data;
             console.log(`This message is main thread log: ${message}`);
 
             let msg = document.getElementById("message-02") as HTMLTextAreaElement;

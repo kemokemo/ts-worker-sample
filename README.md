@@ -2,35 +2,10 @@
 
 This is my sample repo to use WebWorker with Typescript.
 
-![Sequence of this sample](media/sequence-of-this-sample.svg)
+Special thanks to the awesome book:
 
-`*1` part can also be modified to send data to the backend to make the data storage persistent.
-
-In this sample, the message is sent back to the main thread with the response comment immediately to check the inter-thread processing and the reflection process to the UI.
-
-## Build
-
-```sh
-npm i
-```
-
-```sh
-npm run build
-```
-
-For the build process, we use [esbuild](https://github.com/evanw/esbuild), which runs very fast. See [scripts/build.js](https://github.com/kemokemo/ts-worker-sample/blob/main/scripts/build.js) for detailed instructions.
-
-If you develop and debug, please use `build-dev` to generate map file.
-
-```sh
-npm run build-dev
-```
-
-## Run
-
-You can use a small tool like [miniweb](https://github.com/kemokemo/miniweb) to serve the files.
-
-```sh
-miniweb -p 9000 dist
-```
+- [Programming TypeScript](https://www.oreilly.com/library/view/programming-typescript/9781492037644/)
+  - [bcherny/programming-typescript-answers](https://github.com/bcherny/programming-typescript-answers)
+- In Japanese: [プログラミングTypeScript - スケールするJavaScriptアプリケーション開発](https://www.oreilly.co.jp/books/9784873119045/)
+  - [oreilly-japan/programming-typescript-ja](https://github.com/oreilly-japan/programming-typescript-ja)
 
